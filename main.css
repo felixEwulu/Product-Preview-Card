@@ -1,0 +1,182 @@
+         :root {
+            --dark-cyan: hsl(158, 36%, 37%);
+            --dark-cyan-var: hsl(159, 36%, 26%);
+            --cream: hsl(30, 38%, 92%);
+            --dark-blue: hsl(212, 21%, 14%);
+            --dark-grayish-blue: hsl(228, 12%, 48%);
+            --white: hsl(0, 0%, 100%);
+            --shadow: hsla(0, 0%, 15%, .1);
+            --font-size: .873rem;
+            /* 14px */
+            --font-bold: 700;
+            --text-color: #465b52;
+        }
+    
+        /* ============== BASE =============== */
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    
+        body {
+            font-family: sans-serif;
+            font-size: var(--font-size);
+            background: var(--cream);
+        }
+
+        img {
+             max-width: 100%;
+            height: auto;
+        }
+
+        main{
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        .container{
+            width: 80vw;
+            min-width: 350px;
+            background-color: var(--white);
+            border-radius: .75rem;
+            display: grid;
+            row-gap: 1.2rem;
+            max-width: 900px;
+            max-height: 900px;
+            box-shadow: var(--shadow);
+        }
+
+        .product__img {
+            border-top-left-radius: .75rem;
+            border-top-right-radius: .75rem;
+        }
+
+        /* ============ PRODUCT TEXTS ================ */
+        .product__info{
+            display: grid;
+            row-gap: 1.2rem;
+            padding-left: 1rem;
+        }
+
+        .product__title{
+            color: var(--dark-blue);
+            font-size: .875rem;
+            letter-spacing: .35rem;
+            font-weight: 600;
+        }
+
+        .product__model{
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .product__text{
+            color: var(--dark-grayish-blue);
+            padding-right: 1.5rem;
+            line-height: 1.6;
+            font-size: .875rem;
+            font-weight: 500;
+        }
+
+        .product__pricing{
+            display: flex;
+            column-gap: 1.5rem;
+            align-items: center;
+        }
+
+        .product__price{
+            font-size: 34px;
+            font-weight: 600;
+            color: var(--dark-cyan);
+        }
+
+        .product__discount{
+            text-decoration: line-through;
+            font-size: .95rem;
+            font-weight: 500;
+            color: var(--dark-grayish-blue);
+        }
+
+        .product__button{
+            display: block;
+            width: 90%;
+            margin-bottom: 1.8rem;
+            padding: .85rem 1rem;
+            background: var(--dark-cyan);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: .6rem;
+            border-radius: .3rem;
+
+        }
+
+        .product__button:hover{
+            background: var(--dark-cyan-var);
+            cursor: pointer;
+        }
+
+        .product__cart-text{
+            color: var(--white);
+        }
+
+       
+    
+ 
+        /* .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+    
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        } */
+    
+    
+        @media screen and (min-width: 520px) {
+        main {
+                min-height: 100vh;
+                margin-top: 1.5rem;
+            }
+    
+            
+        }
+
+        @media screen and (min-width: 768px) {
+       .container{
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;;
+       }
+
+       .product__img-container{
+        height: 100%;
+       }
+
+       .product__img{
+        height: 100%;
+        border-top-right-radius: initial;
+        border-bottom-left-radius: .75rem;
+       }
+
+         .product__info {
+             padding: 1.5rem 2rem;
+         }
+
+        .product__text{
+            letter-spacing: 2px;
+            font-size: 1rem;
+        }
+    
+            
+        }
+
+        @media screen and (min-width: 1020px) {
+            .product__info {
+                    padding: 3.5rem 8rem 2rem 2rem;
+                }
+        }
